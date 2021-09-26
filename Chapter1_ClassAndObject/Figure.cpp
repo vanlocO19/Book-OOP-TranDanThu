@@ -34,6 +34,15 @@ void Circle::set(double x0, double y0, double r) {
 	this->radius = r; //assign r to the radius of the circle.
 }
 
+//function used to set value for the radius of a circle.
+void Circle::set(double r) {
+
+	//ensure that the radius is always nonnegative.
+	if (r >= 0) {
+		this->radius = r;
+	}
+}
+
 //function used to move the center of the circle.
 void Circle::move(double dx, double dy) {
 	this->center.move(dx, dy); //call the method of the Point2D class.
@@ -49,4 +58,15 @@ double Circle::area() {
 //formula: perimeter = 2 * pi * radius
 double Circle::perimeter() {
 	return 2 * PI * this->radius;
+}
+
+void inputCircleData(std::istream& inDevice, Circle& cir) {
+	double x0, y0, r;
+	inDevice >> x0 >> y0 >> r;
+	cir.set(x0, y0, r);
+}
+
+void outputCircleData(std::ostream& outDevice, Circle& cir) {
+	outDevice << "+ Area of the circle: " << cir.area() << "\n";
+	outDevice << "+ Perimeter of the circle: " << cir.perimeter() << "\n";
 }

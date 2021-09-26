@@ -3,6 +3,8 @@
 #ifndef _FIGURE_H
 #define _FIGURE_H
 
+#include <iostream>
+
 //declaration of the Point2D class
 class Point2D {
 private:
@@ -25,11 +27,17 @@ private:
 public:
 	void set(double x0, double y0, double r);
 
+	void set(double r);
+
 	void move(double dx, double dy);
 
 	double area();
 
 	double perimeter();
 }; //end declaration of the Circle class
+
+void inputCircleData(std::istream& inDevice, Circle& cir);
+
+void outputCircleData(std::ostream& outDevice, Circle& cir);
 
 #endif // !_FIGURE_H
