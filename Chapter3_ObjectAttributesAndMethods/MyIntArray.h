@@ -10,4 +10,6 @@ public:
 	MyIntArray(int sz);
 
 	~MyIntArray();
+
+	MyIntArray& operator=(const MyIntArray&);
 };

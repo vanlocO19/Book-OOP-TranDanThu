@@ -25,3 +25,16 @@ MyIntArray::~MyIntArray() {
 		this->pArr = NULL;
 	}
 }
+
+MyIntArray& MyIntArray::operator=(const MyIntArray& src) {
+	if (this != &src) {
+		delete[] this->pArr;
+		this->size = src.size;
+		pArr = new int[this->size];
+		for (int i = 0; i < this->size; i++) {
+			this->pArr[i] = src.pArr[i];
+		}
+	}
+	return *this;
+
+}
