@@ -1,8 +1,8 @@
 #ifndef _RECTANGLE_H
 #define _RECTANGLE_H
-#include <iostream>
+#include "Figure.h"
 
-class Rectangle {
+class Rectangle : public Figure { //inheritance from Figure
 protected:
     float width;
     float height;
@@ -12,7 +12,7 @@ public:
 
     Rectangle(float w, float h);
 
-    float area();
+    virtual float area();
 
     virtual void input(std::istream& inDevice);
 };

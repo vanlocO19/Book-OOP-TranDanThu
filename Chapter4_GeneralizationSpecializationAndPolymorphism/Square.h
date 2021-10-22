@@ -5,7 +5,9 @@
 class Square : public Rectangle {
 public:
     Square();
+
     Square(float a);
+    
     virtual void input(std::istream& inDevice);
 };
 
