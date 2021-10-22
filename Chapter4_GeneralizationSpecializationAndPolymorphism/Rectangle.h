@@ -8,11 +8,13 @@ protected:
     float height;
 
 public:
+    Rectangle();
+
     Rectangle(float w, float h);
 
-    float Area();
+    float area();
 
-    void Input(std::istream& inDevice);
+    virtual void input(std::istream& inDevice);
 };
 
 #endif
