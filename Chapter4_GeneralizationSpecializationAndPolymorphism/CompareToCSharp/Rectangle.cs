@@ -6,11 +6,22 @@ class Rectangle : Figure {
         height = h;
     }
 
-    public new string className() {
+    //to re-write the method
+    // public new string className() {
+    //     return "Rectangle";
+    // }
+
+    // public new float area() {
+    //     return width * height;
+    // }
+
+    //to use polymorphism
+    public override string className()
+    {
         return "Rectangle";
     }
 
-    public new float area() {
+    public override float area() {
         return width * height;
     }
 }
