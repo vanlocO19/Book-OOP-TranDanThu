@@ -1,9 +1,22 @@
 #ifndef _CONTAINER_H_
 #define _CONTAINER_H_
 
+#define MAX_ELEMENTS 1000
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Object {
+public:
+    virtual std::string toString() {
+        return "Object";
+    }
+};
+
 class Container {
-private:
-    int iCount;
+protected:
+    int _iCount;
 
 public:
     virtual void put(Object&) = 0;
