@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     }
 
     //close the file
-    inputFile.close();
+    inputFile.close(); //this statement is not necessary because when the inputFile is destroyed, the destructor will close the file automatically
 
     return 0;
 }
