@@ -1,3 +1,5 @@
+//This problem can also be solved using map
+
 #include <iostream>
 #include <fstream>
 #include <vector>
