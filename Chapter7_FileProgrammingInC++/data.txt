@@ -1,5 +1,0 @@
-Hello here is my program
-This is the first line
-This is the second line
-Here is the third line
-And the fourth line here
